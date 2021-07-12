@@ -1,0 +1,52 @@
+<%- include('_header'); %>
+<title>CHANGE CAR CLASS</title>
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0">Dashboard</h1>
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">Dashboard v1</li>
+          </ol>
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </div>
+  <!-- /.content-header -->
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <!-- Small boxes (Stat box) -->
+      <form method="post" action="/changecarclass/{{idea.id}}?_method=PUT"> 
+        <input type="hidden" name="_method" value="PUT">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">Class</label>
+              <select name="class" class="form-control">
+                <option value="A+">A+</option>
+                <option value="A">A</option>
+                <option value="B+">B+</option>
+                <option value="B">B</option>
+              </select>
+            </div>
+          
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">CAR PLATE</label>
+            <input type="text" class="form-control" id="inputEmail4" placeholder="PLATE" name="plate">
+          </div>
+        </div>
+        </div>
+        <center>
+        <button type="submit" class="btn btn-success btn-lg">SUBMIT</button></center>
+      </form>
+      <!-- /.row -->
+    
+      <!-- /.row (main row) -->
+    </div><!-- /.container-fluid -->
+  </section>
+  <%- include('_footer'); %>
